@@ -6,7 +6,7 @@ import { AddEarnComponent }  from './component/addEarn.component';
 @NgModule({
     imports: [
         RouterModule.forChild([
-            { path: '', component: RecentComponent },
+            { path: '', redirectTo: 'recent', pathMatch:'full' },
             { path: 'recent', component: RecentComponent },
             { path: 'addPay', component: AddPayComponent },
             { path: 'addEarn', component: AddEarnComponent }
