@@ -1,0 +1,27 @@
+﻿<div class="my-operate-bar">
+    <a href="#" class="my-btn-back">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span>返回</span>
+    </a>
+    <span class="my-title">
+        [收入|支出]查询
+    </span>
+</div>
+
+<div class="my-btn-container">
+    <span class="label label-primary">最近一月</span>
+    <span class="label label-primary">最近一周</span>
+</div>
+
+<form class="query-form" role="form">
+    <div class="form-group">
+        <label for="beginDate">起始日期</label>
+        <input type="date" class="form-control" id="beginDate" placeholder="起始日期">
+    </div>
+    <div class="form-group">
+        <label for="endDate">结束日期</label>
+        <input type="date" class="form-control" id="endDate" placeholder="结束日期">
+    </div>
+    <a class="btn btn-group-justified btn-primary" routerLink="/query-result">查询</a>
+</form>
+

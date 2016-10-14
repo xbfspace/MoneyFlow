@@ -243,6 +243,15 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\front\addEarn\addEarn.component.css" />
+    <Content Include="app\front\addEarn\addEarn.component.html" />
+    <Content Include="app\front\addPay\addPay.component.css" />
+    <Content Include="app\front\addPay\addPay.component.html" />
+    <Content Include="app\front\index\images\avatar.png" />
+    <Content Include="app\front\queryResult\query-result.component.css" />
+    <Content Include="app\front\queryResult\query-result.component.html" />
+    <Content Include="app\front\query\query.component.css" />
+    <Content Include="app\front\query\query.component.html" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -250,6 +259,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="index.html" />
+    <Content Include="MoneyFlow.png" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -277,6 +287,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="package.json" />
+    <Content Include="app\front\index\index.component.html" />
+    <Content Include="app\front\index\index.component.css" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -310,8 +322,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="app\backend\" />
-    <Folder Include="app\front\component\css\" />
-    <Folder Include="app\front\component\tpl\" />
+    <Folder Include="app\shared\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
@@ -326,9 +337,11 @@
     <TypeScriptCompile Include="app\app.component.ts" />
     <TypeScriptCompile Include="app\app.module.ts" />
     <TypeScriptCompile Include="app\app-routing.module.ts" />
-    <TypeScriptCompile Include="app\front\component\addEarn.component.ts" />
-    <TypeScriptCompile Include="app\front\component\addPay.component.ts" />
-    <TypeScriptCompile Include="app\front\component\recent.component.ts" />
+    <TypeScriptCompile Include="app\front\addEarn\addEarn.component.ts" />
+    <TypeScriptCompile Include="app\front\addPay\addPay.component.ts" />
+    <TypeScriptCompile Include="app\front\index\index.component.ts" />
+    <TypeScriptCompile Include="app\front\queryResult\query-result.component.ts" />
+    <TypeScriptCompile Include="app\front\query\query.component.ts" />
     <TypeScriptCompile Include="app\front\front-routing.module.ts" />
     <TypeScriptCompile Include="app\front\front.module.ts" />
     <TypeScriptCompile Include="app\main.ts" />

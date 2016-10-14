@@ -1,0 +1,40 @@
+﻿header {
+    padding:4px;
+}
+.avatar {
+    display:inline-block;
+}
+    .avatar img {
+        width:30px;
+        height:30px;
+        border-radius:20px;
+    }
+.username {
+    margin-left:10px;
+    font-size:0.9rem;
+}
+.sumaryArea {
+    margin-top:10px;
+    padding:4px;
+}
+    .sumaryArea .my-row {
+        padding:4px 0 4px 0;
+        height:2rem;
+    }
+    .sumaryArea .my-btn {
+        margin-left:20px;
+    }
+    .sumaryArea .sumaryLabel {
+        color:#797878;
+        font-size:0.9rem;
+        font-weight:bold;
+    }
+.functionArea {
+    margin-top:10px;
+}
+    .functionArea .list-group-item {
+        padding-left:4px;
+    }
+.my-normal-line {
+    border-top:solid 1px #ccc;
+}
