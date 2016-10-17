@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.UI;
 
 namespace MoneyFlow.Controllers
 {
@@ -13,5 +14,12 @@ namespace MoneyFlow.Controllers
         {
             return View();
         }
+
+        [OutputCache(Duration = 36000, Location = OutputCacheLocation.Any)]
+        public ActionResult Redirect()
+        {
+            return Redirect("/home/");
+        }
     }
+
 }

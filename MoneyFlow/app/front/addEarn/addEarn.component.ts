@@ -2,6 +2,7 @@
 
 import {FrontService, EarnModel} from '../shared/front.service';
 
+import { Observable }       from 'rxjs/Observable';
 @Component({
     moduleId: module.id,
     templateUrl: 'addEarn.component.html',
@@ -23,8 +24,23 @@ export class AddEarnComponent implements OnInit {
     }
 
     addEarn(model: EarnModel) {
-        alert('id:' + model.id + ' content:' + model.content + ' amount:' + model.amount);
-        //this.frontService.addEarn(model);
+        //this.frontService.addEarn(model)
+        //    .subscribe(
+        //    hero => {
+        //        alert('success');
+        //    },
+        //    error => {
+        //        alert(error);
+        //    });
+
+        this.frontService.getEarn(1)
+            .subscribe(
+            hero => {
+                alert('success');
+            },
+            error => {
+                alert(error);
+            });
     }
 
 }
