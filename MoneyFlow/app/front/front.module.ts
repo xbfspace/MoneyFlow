@@ -1,6 +1,7 @@
 ﻿import { NgModule }       from '@angular/core';
 import { CommonModule }   from '@angular/common';
 import { FormsModule }    from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 
 
@@ -15,6 +16,7 @@ import { FrontRoutingModule } from './front-routing.module';
     imports: [
         CommonModule, 
         FormsModule,
+        HttpModule,
         FrontRoutingModule
     ],
     declarations: [

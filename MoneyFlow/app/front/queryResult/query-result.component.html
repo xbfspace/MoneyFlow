@@ -9,16 +9,37 @@
 </div>
 
 <!--tab-->
-<div>
-    <div class="col-xs-6" style="text-align:center;border-bottom:solid 2px #3a5af3">
+<div class="row my-tab">
+    <div class="col-xs-6 my-tab-btn active">
         支出
     </div>
-    <div class="col-xs-6" style="text-align:center;border-bottom:solid 1px #ccc">
+    <div class="col-xs-6 my-tab-btn">
         收入
     </div>
 </div>
+
 <!--detail list-->
-<!--<div class="functionArea list-group">
-    <a class="list-group-item" routerLink="/query">支出查询</a>
-    <a class="list-group-item" routerLink="/query">收入查询</a>
-</div>-->
+<div class="list-group detail-list">
+    <a class="list-group-item first" routerLink="/query">
+       <div class="row">
+           <div class="col-xs-6">
+               <div>买菜、肉、海鱼</div>
+               <div>2016-10-15</div>
+           </div>
+           <div class="col-xs-6" style="text-align:right">
+               500
+           </div>
+       </div>
+    </a>
+    <a class="list-group-item" routerLink="/query">
+        <div class="row">
+            <div class="col-xs-6">
+                <div>买菜、肉、海鱼</div>
+                <div>2016-10-15</div>
+            </div>
+            <div class="col-xs-6" style="text-align:right">
+                500
+            </div>
+        </div>
+    </a>
+</div>

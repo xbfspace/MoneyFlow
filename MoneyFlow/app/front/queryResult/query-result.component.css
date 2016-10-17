@@ -17,3 +17,21 @@
     color:white;
     border-radius:4px;
 }
+.my-tab {
+    margin-left:0;
+    margin-right:0;
+    height:35px;
+    line-height:33px;/*height(35px) - border-bottom(2px)*/
+}
+    .my-tab .my-tab-btn {
+        text-align:center;
+        border-bottom:solid 1px #ccc;
+        cursor:pointer;
+    }
+        .my-tab .my-tab-btn.active {
+                  border-bottom:solid 2px #3a5af3
+        }
+.detail-list a.first{
+    border-top:0;
+}
+    

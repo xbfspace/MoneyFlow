@@ -11,15 +11,15 @@
 <form class="addPay-form" role="form">
     <div class="form-group">
         <label for="amount">金额</label>
-        <input type="email" class="form-control" id="amount" placeholder="收入金额">
+        <input type="number" class="form-control" name="amount" [(ngModel)]="model.amount" placeholder="收入金额">
     </div>
     <div class="form-group">
         <label for="remark">备注</label>
-        <input type="text" class="form-control" id="remark" placeholder="收入备注">
+        <input type="text" class="form-control" name="remark" [(ngModel)]="model.content" placeholder="收入备注">
     </div>
     <div class="form-group">
         <label for="date">日期</label>
         <input type="date" class="form-control" id="date" placeholder="收入日期">
     </div>
-    <a class="btn btn-group-justified btn-primary">保存</a>
+    <a class="btn btn-group-justified btn-primary" (click)="addEarn(model)">保存</a>
 </form>
