@@ -22,9 +22,21 @@ namespace MoneyFlow
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Redirect", id = UrlParameter.Optional },
+                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
                  namespaces: new string[] { "MoneyFlow.Controllers" }
             );
+
+            //routes.MapRoute(
+            //    name: "spa-fallback",
+            //    url: "{*url}",
+            //    defaults: new { controller = "Home", action = "Index" }
+            //);
+
+            //routes.MapRoute(
+            //    "angular-spa-callback",
+            //    "{*url}",
+            //    new { controller = "Home", action = "Index" }
+            //);
         }
     }
 }

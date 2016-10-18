@@ -5,6 +5,7 @@ using System.Net.Http;
 using System.Web.Http;
 using Microsoft.Owin.Security.OAuth;
 using Newtonsoft.Json.Serialization;
+using MoneyFlow.Models.Filters;
 
 namespace MoneyFlow
 {
@@ -25,6 +26,13 @@ namespace MoneyFlow
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+            //移除xml支持，仅保留json格式支持
+            config.Formatters.Remove(config.Formatters.XmlFormatter);
+            //循环引用对象序列化处理
+            config.Formatters.JsonFormatter.SerializerSettings.PreserveReferencesHandling = Newtonsoft.Json.PreserveReferencesHandling.All;
+            //添加model校验
+            config.Filters.Add(new ValidateModelAttribute());
+            config.ParameterBindingRules.Add()
         }
     }
 }

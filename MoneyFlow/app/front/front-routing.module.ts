@@ -12,12 +12,13 @@ import { QueryResultComponent }    from './queryResult/query-result.component';
 @NgModule({
     imports: [
         RouterModule.forChild([
-            { path: '', redirectTo: 'index', pathMatch: 'full' },
-            { path: 'index', component: IndexComponent },
-            { path: 'addPay', component: AddPayComponent },
-            { path: 'addEarn', component: AddEarnComponent },
-            { path: 'query', component: QueryComponent },
-            { path: 'query-result', component: QueryResultComponent }
+            { path: '', redirectTo: 'home/index', pathMatch: 'full' },
+            { path: 'home', redirectTo: 'home/index', pathMatch:'full' },
+            { path: 'home/index', component: IndexComponent },
+            { path: 'home/addPay', component: AddPayComponent },
+            { path: 'home/addEarn', component: AddEarnComponent },
+            { path: 'home/query', component: QueryComponent },
+            { path: 'home/query-result', component: QueryResultComponent }
         ])
     ],
     exports: [
