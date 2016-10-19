@@ -6,13 +6,16 @@ import { Observable }       from 'rxjs/Observable';
 
 @Injectable()
 export class FrontService {
-    private payApiUrl = 'http://null:8030/api/pay';
-
     constructor(private http: Http) {
 
     }
 
     addEarn(model: EarnModel): Observable<string> {
+        model = new EarnModel();
+        model.Id = 1;
+        model.Amount = 100.01;
+        model.Content = "胡说八道";
+        model.EarnDate = '2016-09-10';
         let body = JSON.stringify(model);
         let headers = new Headers({
             'Content-type':'application/json'
@@ -20,20 +23,14 @@ export class FrontService {
         let options = new RequestOptions({
             headers: headers
         });
-        return this.http.post(this.payApiUrl, body, options)
+
+        return this.http.post('/api/Earn/AddEarn', body, options)
             .map(this.extractData)
             .catch(this.handleError);
-            
     }
 
     getEarn(id: number) {
-        //let body = JSON.stringify({ id: id });
-        //let options = new RequestOptions({
-        //    body: body,
-             
-           
-        //});
-        return this.http.get(this.payApiUrl)
+        return this.http.get('/api/Earn/GetEarn?id=' + id)
             .map(this.extractData)
             .catch(this.handleError);
                  
@@ -55,10 +52,10 @@ export class FrontService {
 }
 
 export class EarnModel {
-    id: number;
-    amount: number;
-    content: string;
-    payDate: string;
+    Id: number;
+    Amount: number;
+    Content: string;
+    EarnDate: string;
 
     constructor() {
 

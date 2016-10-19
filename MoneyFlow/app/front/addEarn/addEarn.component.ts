@@ -18,24 +18,17 @@ export class AddEarnComponent implements OnInit {
 
     ngOnInit() {
         this.model = new EarnModel();
-        this.model.id = 0;
-        this.model.amount = 0;
-        this.model.content = '';
+        this.model.Id = 1;
+        this.model.Amount = 100.01;
+        this.model.Content = "胡说八道";
+        this.model.EarnDate = '2016-09-10';
     }
 
     addEarn(model: EarnModel) {
-        //this.frontService.addEarn(model)
-        //    .subscribe(
-        //    hero => {
-        //        alert('success');
-        //    },
-        //    error => {
-        //        alert(error);
-        //    });
-
-        this.frontService.getEarn(1)
+        this.frontService.addEarn(this.model)
             .subscribe(
-            hero => {
+            data => {
+                console.log('data:',data);
                 alert('success');
             },
             error => {

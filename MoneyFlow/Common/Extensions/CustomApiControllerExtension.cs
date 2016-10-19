@@ -1,0 +1,28 @@
+﻿using System.Net;
+using System.Web.Http;
+using System.Web.Http.Results;
+
+namespace MoneyFlow.Common.Extensions
+{
+    public static class CustomApiControllerExtension
+    {
+        public static IHttpActionResult Success(this ApiController controller,object data) {;
+            return new OkNegotiatedContentResult<SuccessResult>(new SuccessResult { Data = data }, controller);
+        }
+        public static IHttpActionResult Error(this ApiController controller,string errorMessage) {
+            return new NegotiatedContentResult<ErrorResult>(HttpStatusCode.InternalServerError, new ErrorResult() { ErrorMsg = errorMessage, ErrorCode = (int)HttpStatusCode.InternalServerError }, controller);
+        }
+
+        internal class SuccessResult {
+            internal object Data { get; set; }
+           internal bool Success { get { return true; } }
+        }
+        internal class ErrorResult {
+            internal int ErrorCode { get; set; }
+            internal string ErrorMsg { get; set; }
+            internal bool Success { get { return false; } }
+        }
+    }
+
+   
+}

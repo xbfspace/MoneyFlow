@@ -14,7 +14,7 @@ namespace MoneyFlow.Models.DTO
         [Required]
         public int Id { get; set; }
         [Required]
-        [Range(0,1000000,ErrorMessage ="范围0~1000")]
+        [Range(0, 1000000, ErrorMessage = "范围0~1000")]
         public decimal Amount { get; set; }
         [Required]
         public string Content { get; set; }

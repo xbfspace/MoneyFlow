@@ -90,6 +90,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Abstractions" />
@@ -237,8 +238,11 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
-    <Compile Include="Common\MvcStyleActionValueBinder.cs" />
-    <Compile Include="Common\MyCustomActionValueBinder.cs" />
+    <Compile Include="Common\Controllers\BaseApiController.cs" />
+    <Compile Include="Common\Extensions\CustomApiControllerExtension.cs" />
+    <Compile Include="Common\MyActionValueBinder作废.cs" />
+    <Compile Include="Common\MyRequestParameterBingRule.cs" />
+    <Compile Include="Common\MyRequestParameterValueProviderFactory.cs" />
     <Compile Include="Controllers\EarnController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PayController.cs" />

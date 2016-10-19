@@ -1,24 +1,34 @@
 ﻿using MoneyFlow.Models.DTO;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
+using MoneyFlow.Common.Extensions;
+using MoneyFlow.Common.Controllers;
+using System;
 
 namespace MoneyFlow.Controllers
 {
-    public class EarnController : ApiController
+    public class EarnController : BaseApiController
     {
         [HttpPost]
-        public HttpResponseMessage AddEarn(EarnDTO model) {
-            if (ModelState.IsValid)
+        public IHttpActionResult AddEarn(EarnDTO model) {
+            return this.Success(new { hh = "你发多少" });
+        }
+
+        [HttpGet]
+        public IHttpActionResult GetEarn(int id) {
+            try
             {
-                //do add to db
-                return new HttpResponseMessage(HttpStatusCode.OK);
+                var model = new EarnDTO
+                {
+                    Id = 1,
+                    Amount = 100,
+                    Content = "寸土寸金",
+                    EarnDate = DateTime.Now
+                };
+                return this.Success(model);
             }
-            else {
-                return new HttpResponseMessage(HttpStatusCode.BadRequest);
+            catch (Exception ex)
+            {
+                return this.Error(ex.Message);
             }
         }
     }
