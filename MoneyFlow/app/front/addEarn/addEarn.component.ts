@@ -3,6 +3,8 @@
 import {FrontService, EarnModel} from '../shared/front.service';
 
 import { Observable }       from 'rxjs/Observable';
+//引用jquery
+var $=require('jQuery');
 @Component({
     moduleId: module.id,
     templateUrl: 'addEarn.component.html',
@@ -22,9 +24,10 @@ export class AddEarnComponent implements OnInit {
         this.model.Amount = 100.01;
         this.model.Content = "胡说八道";
         this.model.EarnDate = '2016-09-10';
+        console.log('测试引用jquery:',$);
     }
 
-    addEarn(model: EarnModel) {
+    onsubmit(model: EarnModel) {
         this.frontService.addEarn(this.model)
             .subscribe(
             data => {

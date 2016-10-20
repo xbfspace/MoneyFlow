@@ -301,6 +301,7 @@
     <Content Include="package.json" />
     <Content Include="app\front\index\index.component.html" />
     <Content Include="app\front\index\index.component.css" />
+    <Content Include="参考资源.txt" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
