@@ -4,7 +4,9 @@ import {FrontService, EarnModel} from '../shared/front.service';
 
 import { Observable }       from 'rxjs/Observable';
 //引用jquery
-var $=require('jQuery');
+//declare var $: any;
+var $ = require('jQuery');
+require('/app/testcssloader.css');
 @Component({
     moduleId: module.id,
     templateUrl: 'addEarn.component.html',

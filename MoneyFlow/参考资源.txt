@@ -1,1 +1,20 @@
 ﻿1、模块加载 system.js https://github.com/systemjs/systemjs
+
+
+
+
+
+###NPM使用
+#安装jquery:      > npm install jquery --save
+#安装jquery的typescript定义文件以便typescript .ts文件中引用jquery能编译通过 : 
+> npm install typings --global --save
+> typings install dt~jquery --save  
+#安装system.js模块加载器的css文件加载插件https://github.com/systemjs/plugin-css
+> npm install systemjs-plugin-css
+
+
+
+
+
+
+#手机日期选择空间 https://github.com/acidb/mobiscroll
