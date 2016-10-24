@@ -4,10 +4,11 @@
    vaersion:1.0
    author:ddd
    https://github.com/ddd702/datePicker
-   update：2015-5-5(with iscroll4)
+   update：2015-5-5(with iScroll4)
  */
 (function($) {
     "use strict";
+    var iScroll = require('./require/iScroll.js');
     $.fn.datePicker = function(options) {
         return this.each(function(e) {
             //插件默认选项
@@ -63,7 +64,7 @@
 
             function init() { //初始化函数
                 initVal = that.val();
-                if (!$('#datePlugin').size()) {
+                if (!$('#datePlugin').length) {
                     $('body').append('<div id="datePlugin"></div>');
                 }
                 document.getElementsByTagName('body')[0].addEventListener('touchmove', cancleDefault, false);
@@ -218,7 +219,7 @@
                         break;
                 }
             }
-            function destroyScroll(){//销毁iscroll滚动
+            function destroyScroll(){//销毁iScroll.iScroll滚动
                 var scrollArr=[yearScroll,monthScroll,dayScroll,hourScroll,minuteScroll];
                 scrollArr.forEach(function(itm){
                     if (itm!=null) {
@@ -235,7 +236,7 @@
                     yearHtml += '<li data-num=' + (opts.beginyear + i) + '>' + (opts.beginyear + i) + '年</li>';
                 };
                 yearDom.find('ul').html(yearHtml).append('<li></li>');
-                yearScroll = new iScroll('yearScroll', $.extend(true, {}, opts.scrollOpt, {
+                yearScroll = new iScroll.iScroll('yearScroll', $.extend(true, {}, opts.scrollOpt, {
                     onScrollEnd: function() {
                         yearScrollEnd(this);
                     }
@@ -268,7 +269,7 @@
                     }
                 };
                 monthDom.find('ul').html(monthHtml).append('<li></li>');
-                monthScroll = new iScroll('monthScroll', $.extend(true, {}, opts.scrollOpt, {
+                monthScroll = new iScroll.iScroll('monthScroll', $.extend(true, {}, opts.scrollOpt, {
                     onScrollEnd: function() {
                         monthScrollEnd(this);
                     }
@@ -298,7 +299,7 @@
                     }
                 };
                 dayDom.find('ul').html(dayHtml).append('<li></li>');
-                dayScroll = new iScroll('dayScroll', $.extend(true, {}, opts.scrollOpt, {
+                dayScroll = new iScroll.iScroll('dayScroll', $.extend(true, {}, opts.scrollOpt, {
                     onScrollEnd: function() {
                         dayScrollEnd(this);
                     }
@@ -325,7 +326,7 @@
                     }
                 };
                 hourDom.find('ul').html(hourHtml).append('<li></li>');
-                hourScroll = new iScroll('hourScroll',  $.extend(true, {}, opts.scrollOpt, {
+                hourScroll = new iScroll.iScroll('hourScroll',  $.extend(true, {}, opts.scrollOpt, {
                     onScrollEnd: function() {
                         hourScrollEnd(this);
                     }
@@ -348,7 +349,7 @@
                     }
                 };
                 minuteDom.find('ul').html(minuteHtml).append('<li></li>');
-                minuteScroll = new iScroll('minuteScroll', $.extend(true, {}, opts.scrollOpt, {
+                minuteScroll = new iScroll.iScroll('minuteScroll', $.extend(true, {}, opts.scrollOpt, {
                     onScrollEnd: function() {
                         minuteScrollEnd(this);
                     }

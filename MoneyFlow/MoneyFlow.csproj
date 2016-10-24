@@ -49,6 +49,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Dapper, Version=1.50.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.50.2\lib\net451\Dapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
@@ -84,6 +88,18 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.103.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.103\lib\net46\System.Data.SQLite.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.103.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.103\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.103.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.103\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -144,6 +160,10 @@
     <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="TinyMapper, Version=2.0.0.40, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\TinyMapper.2.0.8\lib\net45\TinyMapper.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="WebGrease">
       <Private>True</Private>
@@ -238,7 +258,9 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="BLL\IEarnBusiness.cs" />
     <Compile Include="Common\Controllers\BaseApiController.cs" />
+    <Compile Include="Common\DataAccess\SqLiteHelper.cs" />
     <Compile Include="Common\Extensions\CustomApiControllerExtension.cs" />
     <Compile Include="Common\MyActionValueBinder作废.cs" />
     <Compile Include="Common\MyRequestParameterBingRule.cs" />
@@ -246,6 +268,7 @@
     <Compile Include="Controllers\EarnController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PayController.cs" />
+    <Compile Include="DAL\EarnDal.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -271,60 +294,11 @@
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\plugins\mobiscroll\css\mobiscroll.android-holo-light.css" />
-    <Content Include="Content\plugins\mobiscroll\css\mobiscroll.animation.css" />
-    <Content Include="Content\plugins\mobiscroll\css\mobiscroll.frame.android-holo.css" />
-    <Content Include="Content\plugins\mobiscroll\css\mobiscroll.frame.css" />
-    <Content Include="Content\plugins\mobiscroll\css\mobiscroll.frame.ios.css" />
-    <Content Include="Content\plugins\mobiscroll\css\mobiscroll.frame.jqm.css" />
-    <Content Include="Content\plugins\mobiscroll\css\mobiscroll.frame.wp.css" />
-    <Content Include="Content\plugins\mobiscroll\css\mobiscroll.icons.css" />
-    <Content Include="Content\plugins\mobiscroll\css\mobiscroll.image.css" />
-    <Content Include="Content\plugins\mobiscroll\css\mobiscroll.mobiscroll-dark.css" />
-    <Content Include="Content\plugins\mobiscroll\css\mobiscroll.scroller.android-holo.css" />
-    <Content Include="Content\plugins\mobiscroll\css\mobiscroll.scroller.css" />
-    <Content Include="Content\plugins\mobiscroll\css\mobiscroll.scroller.ios.css" />
-    <Content Include="Content\plugins\mobiscroll\css\mobiscroll.scroller.jqm.css" />
-    <Content Include="Content\plugins\mobiscroll\css\mobiscroll.scroller.wp.css" />
-    <Content Include="Content\plugins\mobiscroll\css\mobiscroll.wp-light.css" />
-    <Content Include="Content\plugins\mobiscroll\index.html" />
-    <Content Include="Content\plugins\mobiscroll\js\i18n\mobiscroll.i18n.ca.js" />
-    <Content Include="Content\plugins\mobiscroll\js\i18n\mobiscroll.i18n.cs.js" />
-    <Content Include="Content\plugins\mobiscroll\js\i18n\mobiscroll.i18n.da.js" />
-    <Content Include="Content\plugins\mobiscroll\js\i18n\mobiscroll.i18n.de.js" />
-    <Content Include="Content\plugins\mobiscroll\js\i18n\mobiscroll.i18n.en-UK.js" />
-    <Content Include="Content\plugins\mobiscroll\js\i18n\mobiscroll.i18n.es.js" />
-    <Content Include="Content\plugins\mobiscroll\js\i18n\mobiscroll.i18n.fa.js" />
-    <Content Include="Content\plugins\mobiscroll\js\i18n\mobiscroll.i18n.fr.js" />
-    <Content Include="Content\plugins\mobiscroll\js\i18n\mobiscroll.i18n.he.js" />
-    <Content Include="Content\plugins\mobiscroll\js\i18n\mobiscroll.i18n.hu.js" />
-    <Content Include="Content\plugins\mobiscroll\js\i18n\mobiscroll.i18n.it.js" />
-    <Content Include="Content\plugins\mobiscroll\js\i18n\mobiscroll.i18n.ja.js" />
-    <Content Include="Content\plugins\mobiscroll\js\i18n\mobiscroll.i18n.lt.js" />
-    <Content Include="Content\plugins\mobiscroll\js\i18n\mobiscroll.i18n.nl.js" />
-    <Content Include="Content\plugins\mobiscroll\js\i18n\mobiscroll.i18n.no.js" />
-    <Content Include="Content\plugins\mobiscroll\js\i18n\mobiscroll.i18n.pl.js" />
-    <Content Include="Content\plugins\mobiscroll\js\i18n\mobiscroll.i18n.pt-BR.js" />
-    <Content Include="Content\plugins\mobiscroll\js\i18n\mobiscroll.i18n.pt-PT.js" />
-    <Content Include="Content\plugins\mobiscroll\js\i18n\mobiscroll.i18n.ro.js" />
-    <Content Include="Content\plugins\mobiscroll\js\i18n\mobiscroll.i18n.ru-UA.js" />
-    <Content Include="Content\plugins\mobiscroll\js\i18n\mobiscroll.i18n.ru.js" />
-    <Content Include="Content\plugins\mobiscroll\js\i18n\mobiscroll.i18n.sk.js" />
-    <Content Include="Content\plugins\mobiscroll\js\i18n\mobiscroll.i18n.sv.js" />
-    <Content Include="Content\plugins\mobiscroll\js\i18n\mobiscroll.i18n.tr.js" />
-    <Content Include="Content\plugins\mobiscroll\js\i18n\mobiscroll.i18n.zh.js" />
-    <Content Include="Content\plugins\mobiscroll\js\mobiscroll.android-holo-light.js" />
-    <Content Include="Content\plugins\mobiscroll\js\mobiscroll.core.js" />
-    <Content Include="Content\plugins\mobiscroll\js\mobiscroll.dom.js" />
-    <Content Include="Content\plugins\mobiscroll\js\mobiscroll.frame.android-holo.js" />
-    <Content Include="Content\plugins\mobiscroll\js\mobiscroll.frame.ios.js" />
-    <Content Include="Content\plugins\mobiscroll\js\mobiscroll.frame.jqm.js" />
-    <Content Include="Content\plugins\mobiscroll\js\mobiscroll.frame.js" />
-    <Content Include="Content\plugins\mobiscroll\js\mobiscroll.frame.wp.js" />
-    <Content Include="Content\plugins\mobiscroll\js\mobiscroll.mobiscroll-dark.js" />
-    <Content Include="Content\plugins\mobiscroll\js\mobiscroll.scroller.js" />
-    <Content Include="Content\plugins\mobiscroll\js\mobiscroll.scrollview.js" />
-    <Content Include="Content\plugins\mobiscroll\js\mobiscroll.wp-light.js" />
+    <Content Include="Content\plugins\datepicker\css\datePicker.css" />
+    <Content Include="Content\plugins\datepicker\js\datePicker.js" />
+    <Content Include="Content\plugins\datepicker\js\require\iscroll.js" />
+    <Content Include="Content\plugins\datepicker\js\require\jquery.min.js" />
+    <Content Include="Content\plugins\datepicker\js\require\zepto.min.js" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -390,7 +364,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="app\backend\" />
-    <Folder Include="app\shared\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
@@ -415,6 +388,7 @@
     <TypeScriptCompile Include="app\front\shared\front.service.ts" />
     <TypeScriptCompile Include="app\main.ts" />
     <TypeScriptCompile Include="app\rxjs-operators.ts" />
+    <TypeScriptCompile Include="app\shared\uxDatePicker.directive.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
@@ -454,7 +428,9 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.103\build\net46\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.103\build\net46\System.Data.SQLite.Core.targets'))" />
   </Target>
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.103\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.103\build\net46\System.Data.SQLite.Core.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

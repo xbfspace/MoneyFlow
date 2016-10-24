@@ -3,6 +3,8 @@ using System.Web.Http;
 using MoneyFlow.Common.Extensions;
 using MoneyFlow.Common.Controllers;
 using System;
+using Nelibur.ObjectMapper;
+using MoneyFlow.Models;
 
 namespace MoneyFlow.Controllers
 {
@@ -10,6 +12,8 @@ namespace MoneyFlow.Controllers
     {
         [HttpPost]
         public IHttpActionResult AddEarn(EarnDTO model) {
+            TinyMapper.Bind<EarnDTO, Earn>();
+            var modelToSave = TinyMapper.Map<Earn>(model);
             return this.Success(new { hh = "你发多少" });
         }
 

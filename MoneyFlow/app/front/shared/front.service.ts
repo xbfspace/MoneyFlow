@@ -11,11 +11,11 @@ export class FrontService {
     }
 
     addEarn(model: EarnModel): Observable<string> {
-        model = new EarnModel();
-        model.Id = 1;
-        model.Amount = 100.01;
-        model.Content = "胡说八道";
-        model.EarnDate = '2016-09-10';
+        //model = new EarnModel();
+        //model.Id = 1;
+        //model.Amount = 100.01;
+        //model.Content = "胡说八道";
+        //model.EarnDate = '2016-09-10';
         let body = JSON.stringify(model);
         let headers = new Headers({
             'Content-type':'application/json'

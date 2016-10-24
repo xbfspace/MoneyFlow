@@ -17,4 +17,6 @@
 
 
 
-#手机日期选择空间 https://github.com/acidb/mobiscroll
+#sqllite管理工具 http://sqlitebrowser.org/
+#分布式id生成算法snowflake介绍 http://www.dengchuanhua.com/132.html
+#snowflake算法c#实现  https://github.com/ccollie/snowflake-net/tree/master/Snowflake

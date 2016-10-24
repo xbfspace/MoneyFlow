@@ -12,6 +12,8 @@ import { QueryComponent }    from './query/query.component';
 import { QueryResultComponent }    from './queryResult/query-result.component';
 //import { HeroService } from './hero.service';
 import { FrontRoutingModule } from './front-routing.module';
+
+import { UxDatePickerDirective } from '../shared/uxDatePicker.directive';
 @NgModule({
     imports: [
         CommonModule, 
@@ -24,7 +26,8 @@ import { FrontRoutingModule } from './front-routing.module';
         AddPayComponent,
         AddEarnComponent,
         QueryComponent,
-        QueryResultComponent
+        QueryResultComponent,
+        UxDatePickerDirective
     ],
     providers: [
         //HeroService
