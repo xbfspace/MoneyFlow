@@ -19,8 +19,9 @@ namespace MoneyFlow.Controllers
             TinyMapper.Bind<EarnDTO, Earn>();
             var entity = TinyMapper.Map<Earn>(model);
             earnBusiness.Add(entity);
-            var tt=this.Success("add success");
-            return tt;
+           // var tt=this.Success("add success");
+            //return tt;
+           return this.Success("add success");
         }
 
         [HttpGet]
