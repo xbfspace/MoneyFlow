@@ -1,4 +1,5 @@
 ﻿using System.Net;
+using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Results;
 
@@ -6,7 +7,7 @@ namespace MoneyFlow.Common.Extensions
 {
     public static class CustomApiControllerExtension
     {
-        public static IHttpActionResult Success(this ApiController controller,object data) {;
+        public static IHttpActionResult Success(this ApiController controller,object data) {
             return new OkNegotiatedContentResult<SuccessResult>(new SuccessResult { Data = data }, controller);
         }
         public static IHttpActionResult Error(this ApiController controller,string errorMessage) {
@@ -22,6 +23,7 @@ namespace MoneyFlow.Common.Extensions
             internal string ErrorMsg { get; set; }
             internal bool Success { get { return false; } }
         }
+
     }
 
    

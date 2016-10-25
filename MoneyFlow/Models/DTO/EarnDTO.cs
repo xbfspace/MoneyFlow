@@ -11,7 +11,7 @@ namespace MoneyFlow.Models.DTO
     /// </summary>
     public class EarnDTO
     {
-        [Required]
+        //[Required]
         public int Id { get; set; }
         [Required]
         [Range(0, 1000000, ErrorMessage = "范围0~1000")]

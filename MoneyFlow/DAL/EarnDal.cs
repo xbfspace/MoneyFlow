@@ -13,7 +13,7 @@ namespace MoneyFlow.DAL
         public int Add(Earn model) {
             using (var conn=SqLiteHelper.GetConnection()) {
                 var insertSql = "insert into earn(ID,Amount,Content,EarnDate) values (@id,@amount,@content,@earnDate)";
-                return conn.Execute(insertSql, new { id="",amount="",content="",earnDate="" });
+                return conn.Execute(insertSql, new { id=model.Id,amount=model.Amount,content=model.Content,earnDate=model.EarnDate });
             }
         }
     }

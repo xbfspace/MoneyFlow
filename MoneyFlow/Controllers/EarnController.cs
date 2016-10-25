@@ -5,16 +5,22 @@ using MoneyFlow.Common.Controllers;
 using System;
 using Nelibur.ObjectMapper;
 using MoneyFlow.Models;
+using MoneyFlow.BLL;
+using MoneyFlow.BLL.Impl;
 
 namespace MoneyFlow.Controllers
 {
     public class EarnController : BaseApiController
     {
+        private IEarnBusiness earnBusiness = new EarnBusiness();
+
         [HttpPost]
         public IHttpActionResult AddEarn(EarnDTO model) {
             TinyMapper.Bind<EarnDTO, Earn>();
-            var modelToSave = TinyMapper.Map<Earn>(model);
-            return this.Success(new { hh = "你发多少" });
+            var entity = TinyMapper.Map<Earn>(model);
+            earnBusiness.Add(entity);
+            var tt=this.Success("add success");
+            return tt;
         }
 
         [HttpGet]

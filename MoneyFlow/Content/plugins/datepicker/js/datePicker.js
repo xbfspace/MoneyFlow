@@ -111,9 +111,12 @@
                     var d = $('#dayScroll li').eq(initD).data('num');
                     var h = $('#hourScroll li').eq(initH).data('num');
                     var m = $('#minuteScroll li').eq(initI).data('num');
-                    that.val($('.d-return-info').html());
+                    var myVal = $('.d-return-info').html();
+                    //that.val($('.d-return-info').html());
+                    that.val(myVal);
                     $('#datePlugin').hide().html('');
-                    opts.callBack({y:y,M:M,d:d,h:h,m:m});
+                    //opts.callBack({y:y,M:M,d:d,h:h,m:m});
+                    opts.callBack(myVal, { y: y, M: M, d: d, h: h, m: m });
                 });
                 $('#d-cancleBtn').on('click', function(event) {
                     destroyScroll();

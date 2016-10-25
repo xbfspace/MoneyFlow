@@ -259,6 +259,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="BLL\IEarnBusiness.cs" />
+    <Compile Include="BLL\Impl\EarnBusiness.cs" />
     <Compile Include="Common\Controllers\BaseApiController.cs" />
     <Compile Include="Common\DataAccess\SqLiteHelper.cs" />
     <Compile Include="Common\Extensions\CustomApiControllerExtension.cs" />

@@ -8,32 +8,30 @@
     </span>
 </div>
 
-<form class="addPay-form" role="form" (ngSubmit)="onSubmit()" #addEarnForm="ngForm">
+<form class="addPay-form" role="form" (ngSubmit)="onSubmit()" [formGroup]="addEarnForm">
     <div class="form-group">
         <label for="amount">金额</label>
-        <input type="number" class="form-control" name="amount" [(ngModel)]="model.amount" placeholder="收入金额" 
-               required
-               #amount="ngModel">
-        <div [hidden]="amount.valid || amount.pristine" class="alert alert-danger">
-            金额不能为空
+        <input type="text" class="form-control" formControlName="Amount"  placeholder="收入金额" required>
+        <div *ngIf="formErrors.Amount" class="alert alert-danger">
+            {{ formErrors.Amount}}
         </div>
     </div>
     <div class="form-group">
         <label for="remark">备注</label>
-        <input type="text" class="form-control" name="remark" [(ngModel)]="model.content" placeholder="收入备注"
-                required
-                #content="ngModel">
-        <div [hidden]="content.valid || content.pristine" class="alert alert-danger">
-            备注不能为空
+        <input type="text" class="form-control" formControlName="Content"  placeholder="收入备注" required>
+        <div *ngIf="formErrors.Content" class="alert alert-danger">
+            {{ formErrors.Content}}
         </div>
     </div>
     <div class="form-group">
         <label for="date">日期</label>
-        <input type="date" class="form-control" id="date" placeholder="收入日期" uxDatePicker="" readonly
-               required       
-        >
+        <input type="text" class="form-control" id="date" formControlName="EarnDate" placeholder="收入日期" required readonly >
+        <div *ngIf="formErrors.EarnDate" class="alert alert-danger">
+            {{ formErrors.EarnDate}}
+        </div>
     </div>
-    <button class="btn btn-group-justified btn-primary" type="submit" [disabled]="!addEarnForm.form.valid">保存</button>
+    <button class="btn btn-group-justified btn-primary" type="submit" [disabled]="!addEarnForm.valid">保存</button>
+    <!--<button type="button" (click)="test()">测试</button>-->
 </form>
 
 <!--<div class="loader-container">
