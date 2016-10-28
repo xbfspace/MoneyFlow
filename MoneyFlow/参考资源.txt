@@ -18,7 +18,9 @@
 
 
 #sqllite管理工具 http://sqlitebrowser.org/
-#分布式id生成算法snowflake介绍 http://www.dengchuanhua.com/132.html
+#分布式id生成算法snowflake
+介绍 http://www.dengchuanhua.com/132.html
+介绍及变种 http://darktea.github.io/notes/2013/12/08/Unique-ID
 #snowflake算法c#实现  https://github.com/ccollie/snowflake-net/tree/master/Snowflake
 
 #redis服务安装包 https://github.com/MSOpenTech/redis/releases

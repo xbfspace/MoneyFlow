@@ -7,6 +7,7 @@ using Nelibur.ObjectMapper;
 using MoneyFlow.Models;
 using MoneyFlow.BLL;
 using MoneyFlow.BLL.Impl;
+using MoneyFlow.Common;
 
 namespace MoneyFlow.Controllers
 {
@@ -18,6 +19,7 @@ namespace MoneyFlow.Controllers
         public IHttpActionResult AddEarn(EarnDTO model) {
             TinyMapper.Bind<EarnDTO, Earn>();
             var entity = TinyMapper.Map<Earn>(model);
+            entity.Id = IdGenerator.GetId();
             earnBusiness.Add(entity);
            // var tt=this.Success("add success");
             //return tt;

@@ -86,6 +86,10 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Snowflake, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ThirdLibs\Snowflake.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.SQLite, Version=1.0.103.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
@@ -263,6 +267,7 @@
     <Compile Include="Common\Controllers\BaseApiController.cs" />
     <Compile Include="Common\DataAccess\SqLiteHelper.cs" />
     <Compile Include="Common\Extensions\CustomApiControllerExtension.cs" />
+    <Compile Include="Common\IdGenerator.cs" />
     <Compile Include="Common\MyActionValueBinder作废.cs" />
     <Compile Include="Common\MyRequestParameterBingRule.cs" />
     <Compile Include="Common\MyRequestParameterValueProviderFactory.cs" />
@@ -331,6 +336,7 @@
     <Content Include="package.json" />
     <Content Include="app\front\index\index.component.html" />
     <Content Include="app\front\index\index.component.css" />
+    <Content Include="ThirdLibs\Snowflake.dll" />
     <Content Include="参考资源.txt" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
