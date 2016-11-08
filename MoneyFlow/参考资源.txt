@@ -27,3 +27,11 @@
 #redis客户端 https://github.com/cinience/RedisStudio
 
 #npoi导入excel异常解决 http://www.itdadao.com/articles/c15a271107p0.html
+
+
+#同名dll多版本引用，web.config app.config添加codebase解决  （v2放于bin文件夹下）
+ <dependentAssembly>
+        <assemblyIdentity name="ICSharpCode.SharpZipLib" publicKeyToken="1b03e6acf1164f73" culture="neutral" />
+        <codebase href="v2/ICSharpCode.SharpZipLib.dll" version="0.86.0.518"></codebase>
+        <!--<bindingRedirect oldVersion="0.0.0.0-0.86.5.0" newVersion="0.86.5.0" />-->
+      </dependentAssembly>
