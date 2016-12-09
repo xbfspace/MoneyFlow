@@ -1,0 +1,23 @@
+﻿.side-bar {
+    border-right:solid 1px #808080;
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    width:100px;
+}
+.menu-block {
+    width:100%;
+    border-bottom:solid 1px #f5d7d7;
+    height:70px;
+    text-align:center;
+}
+    .menu-block:hover {
+        border-left:solid 2px #337ab7;
+        color:#337ab7;
+        cursor:pointer;
+    }
+.menu-icon {
+    height:30px;
+}
+

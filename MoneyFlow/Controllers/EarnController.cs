@@ -18,7 +18,7 @@ namespace MoneyFlow.Controllers
         [HttpPost]
         public IHttpActionResult AddEarn(EarnDTO model) {
             TinyMapper.Bind<EarnDTO, Earn>();
-            var entity = TinyMapper.Map<Earn>(model);
+            var entity = TinyMapper.Map<Earn>(model); 
             entity.Id = IdGenerator.GetId();
             earnBusiness.Add(entity);
            // var tt=this.Success("add success");

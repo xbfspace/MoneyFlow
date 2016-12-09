@@ -6,6 +6,7 @@ import { FormsModule, ReactiveFormsModule }    from '@angular/forms';
 import { AppComponent }      from './app.component';
 import { AppRoutingModule }  from './app-routing.module';
 import { FrontModule }         from './front/front.module';
+import { FavorsModule } from './favors/favors.module';
 
 
 
@@ -15,6 +16,7 @@ import { FrontModule }         from './front/front.module';
         FormsModule,
         ReactiveFormsModule,
         FrontModule,
+        FavorsModule,
         AppRoutingModule
     ],
     declarations: [

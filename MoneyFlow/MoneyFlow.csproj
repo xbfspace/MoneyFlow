@@ -287,6 +287,9 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\favors\index\images\avatar.png" />
+    <Content Include="app\favors\index\index.component.css" />
+    <Content Include="app\favors\index\index.component.html" />
     <Content Include="app\front\addEarn\addEarn.component.css" />
     <Content Include="app\front\addEarn\addEarn.component.html" />
     <Content Include="app\front\addPay\addPay.component.css" />
@@ -370,6 +373,7 @@
     <Content Include="typings.json" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="app\3rd\" />
     <Folder Include="app\backend\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
@@ -385,6 +389,9 @@
     <TypeScriptCompile Include="app\app.component.ts" />
     <TypeScriptCompile Include="app\app.module.ts" />
     <TypeScriptCompile Include="app\app-routing.module.ts" />
+    <TypeScriptCompile Include="app\favors\favors-routing.module.ts" />
+    <TypeScriptCompile Include="app\favors\favors.module.ts" />
+    <TypeScriptCompile Include="app\favors\index\index.component.ts" />
     <TypeScriptCompile Include="app\front\addEarn\addEarn.component.ts" />
     <TypeScriptCompile Include="app\front\addPay\addPay.component.ts" />
     <TypeScriptCompile Include="app\front\index\index.component.ts" />
